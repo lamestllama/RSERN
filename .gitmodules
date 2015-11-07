@@ -1,6 +1,3 @@
-[submodule "SERNLIB"]
-	path = SERNLIB
-	url = git@github.com:lamestllama/SERNLIB.git
 [submodule "src/SERNLIB"]
 	path = src/SERNLIB
 	url = git@github.com:lamestllama/SERNLIB.git
