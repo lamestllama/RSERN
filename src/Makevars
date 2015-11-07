@@ -1,0 +1,11 @@
+# See Section 1.2.1 "Using 'Makevars'" of Writing R Extensions 
+# cran.r-project.org/doc/manuals/R-exts.pdf
+ 
+PKG_CFLAGS= 
+PKG_CPPFLAGS=-Ilibsern  PKG_LIBS=-Llibsern -lsern
+ 
+$(SHLIB): SERNLIB/libsern.a
+ 
+SERNLIB/libsern.a:
+	@(cd SERNLIB  && $(MAKE) static CC="$(CC)" CFLAGS="$(CFLAGS)")
+
