@@ -1,0 +1,11 @@
+Package: RSERN
+Type: Package
+Title: A Spatially Embedded Random Network Generator
+Encoding: UTF-8
+Version: 1.0
+Date: 2015-10-10
+Author: Eric Parsonage
+Maintainer:  <eric.parsonage@adelaide.edu.au>
+Description: Generates Spatially Embedded Networks using a O(e) algorithm.
+License: GPL-3
+Depends: igraph
