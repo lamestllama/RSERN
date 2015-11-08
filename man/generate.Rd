@@ -22,5 +22,5 @@ An igraph object including
 }
 \author{Eric Parsonage}
 \examples{
-x <- generate(s=1,b=0.1,N=1000)
+x <- generate(s=1,q=0.1,N=1000)
 }

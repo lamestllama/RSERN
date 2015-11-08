@@ -51,7 +51,7 @@ void errIdAndTxt(const char * filename,
     va_list argptr;
     Rprintf("\n%s line %d : ", filename, line);
     va_start(argptr,fmt);
-    printf(fmt, argptr);
+    Rprintf(fmt, argptr);
     va_end(argptr);
 
 }
@@ -85,12 +85,6 @@ SEXP generate(SEXP args)
 
     uint64_t N;
     int *from, *to, *id;
-
-    // get the arguments
-    //s  = REAL(args)[0];
-    //beta = REAL(args)[1];
-    //N = round(REAL(args)[2]);
-
 
     // before we start clear all our structures
     memset(&nodes, 0, sizeof(NodeList));

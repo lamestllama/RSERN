@@ -10,6 +10,12 @@
 #SERNLIB/libsern.a:
 #	@(cd SERNLIB  && $(MAKE) static CC="$(CC)" CFLAGS="$(CFLAGS)")
 
-SOURCES = $(wildcard SERNLIB/*.c *.c)
+SOURCES = RSERN.c SERNLIB/FastSERN.c	SERNLIB/connected.c	SERNLIB/edgeprobfuncs.c SERNLIB/nodegen.c SERNLIB/binomial.c	SERNLIB/edgelist.c	SERNLIB/metrics.c	SERNLIB/uniform.c
+#$(wildcard SERNLIB/*.c *.c)
 OBJECTS = $(SOURCES:.c=.o)
+
+all: $(SHLIB)
+
+clean:
+	@rm -f $(OBJECTS)
 
