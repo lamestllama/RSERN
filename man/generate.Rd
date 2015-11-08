@@ -3,7 +3,7 @@
 \title{Spatially Embedded Random Network Generator}
 \description{Generates a Spatially Embedded Random Network}
 \usage{
-generate(s, beta, N)
+generate(s, q, N)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
