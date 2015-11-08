@@ -3,14 +3,13 @@
 \title{Spatially Embedded Random Network Generator}
 \description{Generates a Spatially Embedded Random Network}
 \usage{
-generate(s, beta, N, ER = 0)
+generate(s, beta, N)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{s}{s parameter}
-  \item{beta}{beta parameter}
+  \item{q}{q parameter}
   \item{N}{number of nodes}
-  \item{ER}{internal DO NOT TOUCH}
 }
 \value{
 An igraph object including
