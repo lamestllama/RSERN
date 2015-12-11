@@ -22,5 +22,8 @@ An igraph object including
 }
 \author{Eric Parsonage}
 \examples{
-x <- generate(s=1,q=0.1,N=1000)
+x<-generate(0.1, 0.01, 1000)
+adjacent.triangles(x)
+plot.igraph(x)
+
 }

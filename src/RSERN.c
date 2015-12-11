@@ -125,7 +125,7 @@ SEXP generate(SEXP args)
     //    options.probGivenDistance =
     //    probabilityFunctions[(uint32_t)mxGetScalar(prhs[PROBABILITY_FUN_rhs])];
     //
-    options.probGivenDistance =  probabilityFunctions[0 /*waxman*/];
+    options.probGivenDistance =  probabilityFunctions[(int)round(REAL(args)[3])];
 
     //
     //    // there is a possibility that we have more than one shape parameter */
@@ -176,7 +176,7 @@ SEXP generate(SEXP args)
     //    /* distance given a diatace in x and one in y */
     //    options.distance =
     //    distanceFunctions[(uint32_t) mxGetScalar(prhs[DISTANCE_FUN_rhs])];
-    options.distance = distanceFunctions[0 /* euclidean */];
+    options.distance = distanceFunctions[(int)round(REAL(args)[4])];
 
 
 
@@ -244,7 +244,7 @@ SEXP generate(SEXP args)
     vector = unit_square;
     for (i = 0; i <  2; i++)
         polygonAppend(&options, polygon, vector + i);
-    geometry = geometryGenerate( &options, rectangle, polygon);
+    geometry = geometryGenerate( &options, (GeometryType) round(REAL(args)[5]), polygon);
 
     /* create the graph */
     // TODO function to set initial size close to that needed
